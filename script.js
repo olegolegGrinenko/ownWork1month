@@ -1,52 +1,62 @@
-// Урок по if else
+/*// Урок по function
 
-const userAge = 24;
-let minAge = 18;
+/**
+ * 
+ * @param {number} value 
+ * @returns {number}
+ */
 
-if (userAge >= minAge) {
-  console.log("yes");
-} else {
-  console.log("no");
+/*function checkInput(value = 23) {
+  if(value % 2 === 0) {
+    return 'even';
+  }
+  return 'odd';
+} 
+console.log(checkInput()); 
+
+// задача 1
+debugger
+let userInput = prompt ('Enter number: ');
+
+function checkUserInputNumber(value) {
+  if (value === "" || value === null || isNaN(value) || value === " ") {
+    return false;
+  }
+  return true;
 }
 
-userAge >= minAge ? console.log("yes") : console.log("no");
-
-let number = 46;
-if (number % 2 === 0) {
-  console.log("even");
+if (checkUserInputNumber(userInput)) {
+  const finalUserInput = Number(userInput);
+  console.log(finalUserInput); 
 } else {
-  console.log("odd");
+  console.log('try again');
 }
 
-const userAge1 = 14;
-if (userAge1 >= 6 && userAge1 < 18) {
-  console.log("child");
-} else {
-  console.log("adult");
-}
+/**
+ * 
+ * @param {number} value 
+ * @returns {string}
+ */
 
-const number1 = 58;
-const positiveNum = 0;
-if (number1 >= positiveNum) {
-  console.log("positive");
-} else {
-  console.log("negative");
-}
+/* function checkUserInput(value = userInput) {
+  if(value % 2 === 0) {
+    return 'even';
+  }
+  return 'odd';
+} 
+console.log(checkUserInput());
 
-let num1 = 12;
-let num2 = 32;
-const result1 = num1 - num2;
-const result2 = num1 * num2;
+*/
 
-if (num1 > num2) {
-  console.log(result1);
-} else {
-  console.log(result2);
-}
+// Задача №2
+debugger;
 
-const num3 = 21;
-if (num3 % 7 === 0 && num3 % 3 === 0) {
-  console.log("you win");
-} else {
-  console.log("you loose");
+function giveResult(_value1 = 1, _value2 = "2") {
+  if (typeof _value1 === typeof _value2 && _value1 > _value2) {
+    return _value1;
+  } else if (typeof _value1 === typeof _value2 && _value2 > _value1) {
+    return _value2;
+  }
+  return null;
 }
+console.log(giveResult());
