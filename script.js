@@ -141,4 +141,73 @@ function getNumber(BEGIN, END) {
   }
 }
 console.log(getNumber(100, 0));
+
+function GetUserInformation (name, secondName, age) {
+  this.name = name;
+  this.secondName = secondName;
+  this.age = age;
+  this.logNameAndSecondName = function() {
+    let nameAndSecondName = this.name + this.secondName;
+    console.log(nameAndSecondName);
+  };
+}
+const olegInformation = new GetUserInformation ("Oleg", "Grinenko", 24);
+console.log(olegInformation); 
+olegInformation.logNameAndSecondName();
+
+// Task 1
+let userInfo = {
+  name: "Vasya",
+  age: 30,
+}
+Object.assign(userInfo,{['likes js']:true, city: "Uzhhorod"});
+console.log(userInfo);
+
+// task 2
+let userInfo = {
+}
+
+userInfo.name = "Vasya";
+console.log(userInfo);
+userInfo.age = 30;
+console.log(userInfo);
+userInfo.name = "Lena";
+console.log(userInfo);
+delete userInfo.name;
+console.log(userInfo);
+
+let country = {
+  name: "Ukraine",
+  area: 603700,
+  population: 52000000,
+}
+userInfo.logPopulationDensity()  {
+  let populationDensity = this.population / this.HTMLAreaElement;
+  console.log(populationDensity) ;
+};
+
+console.log(userInfo);
+// Task 3
+const contry = {
+  name: "Ukraine",
+  area: 603700,
+  population: 52000000, 
+}
+contry.logPopulationDensity = function() {
+  let populationDensity = this.area / this.population;
+  console.log(populationDensity);
+}
+contry.logPopulationDensity();
 */
+// Task 3.1
+function ShowInformationContry (name, area, population) {
+    this.name = name;
+    this.area = area;
+    this.population = population;
+    this.logPopulationDensity = function() {
+    let populationDensity = this.area / this.population;
+    console.log(populationDensity);
+  };
+}
+const contryUkraine = new ShowInformationContry ("Ukraine", 603700, 4381500);
+console.log(contryUkraine.logPopulationDensity());
