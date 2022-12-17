@@ -211,3 +211,5 @@ function ShowInformationContry (name, area, population) {
 }
 const contryUkraine = new ShowInformationContry ("Ukraine", 603700, 4381500);
 console.log(contryUkraine.logPopulationDensity());
+
+// 
